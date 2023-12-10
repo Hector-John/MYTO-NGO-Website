@@ -34,10 +34,6 @@ body {
   position: relative;
   margin-top: 20px;
 }
-.heading p {
-  font-weight: bold;
-  margin-top: 10px;
-}
 .heading h1::after {
   content: "";
   position: absolute;
@@ -48,6 +44,8 @@ body {
   background: var(--themeRed);
 }
 .heading p {
+  font-weight: bold;
+  margin-top: 10px;
   font-size: 18px;
   color: #666;
   margin-bottom: 15px;
@@ -155,7 +153,9 @@ body {
   align-items: center;
   margin-bottom: 50px;
 }
-
+.sp {
+  margin: 3.5rem;
+}
 .sp h5 {
   text-transform: uppercase;
   text-align: center;
@@ -279,7 +279,6 @@ body {
   padding: 30px;
 }
 
-
 /* ------------footer----------- */
 footer {
   background: #181818;
@@ -337,166 +336,31 @@ footer .newsletter input {
   width: 100%;
 }
 
-/* md screens------------ */
-@media (min-width: 477px) and (max-width: 768px) {
-  .heading {
-    padding: 0px 20px;
-    height: 100svh;
-  }
+/* -------sm screens----- */
+@media (max-width: 480px) {
   .heading h1 {
-    font-size: 36px;
+    font-size: 2.3rem;
   }
   .heading p {
     font-size: 12px;
-    margin-bottom: 0px;
   }
   .blogContainer {
-    padding: 0px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 15rem;
+    margin-bottom: 17rem;
   }
   .blogAbout {
-    padding: 20px;
-    flex-direction: column;
-  }
-  .blogImg {
-    margin-right: 0px;
-    margin-bottom: 20px;
-  }
-  .blogContent p {
-    padding: 0px;
-    font-size: 15px;
-  }
-  .blogContent .read {
-    font-size: 16px;
-  }
-  .we {
-    margin-top: 17rem;
-    margin-bottom: 0px;
-  }
-  .we h1 {
-    font-size: 23px;
-  }
-  .we p {
-    font-size: 15px;
-    line-height: 1.5;
-  }
-  .sp {
-    margin-top: 250px;
-  }
-  .sp h5 {
-    font-size: 1.4rem;
-  }
-  .sponsors {
     display: flex;
     flex-direction: column;
   }
-  .sponsors img {
-    padding: 5px;
-  }
-  .goal {
-    padding: 20px;
-    flex-direction: column;
-  }
-  .goal h1 {
-    font-size: 23px;
-  }
-  .goal p {
-    font-size: 15px;
-    line-height: 1.5;
-  }
-  .objectives {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .objectives .img {
-    width: 100%;
-  }
-
-  .objectives img {
-    margin: 0;
-    width: 100%;
-    height: 100%;
-  }
-  .objectives2 .img {
-    width: 100%;
-  }
-
-  .objectives2 .img img {
-    display: none;
-  }
-  .objective {
-    width: 100%;
-    margin: 0;
-  }
-  .objectives2 {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-  }
-  .objectives2 .objective {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-  }
-  .task {
-    display: block;
+  .blogAbout .blogImg {
     margin: auto;
-    width: 100%;
-  }
-  .task h1 {
-    font-size: 23px;
-  }
-  .task p {
-    font-size: 15px;
-    line-height: 1.5;
-  }
-
-  /* -------------footer------- */
-  footer .container {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 15px;
-  }
-  .newsletter,
-  .footerLinks,
-  .connect {
-    margin: 30px;
-  }
-  footer .newsletter {
-    height: 40px;
-    margin-bottom: 10px;
-  }
-  footer .newsletter img {
-    width: 100%;
-    height: 80px;
-    margin-bottom: 10px;
-  }
-  footer .newsletter input {
-    background: transparent;
-    border: 1px solid #444;
-    border-radius: 50px;
-    outline: none;
-    padding: 10px 15px;
-    width: 100%;
-    margin-top: 50px;
-  }
-}
-
-/* -------sm screens----- */
-@media (max-width: 476px) {
-  .blogAbout {
-    display: flex;
-    flex-direction: column;
   }
   .we {
-    margin-top: 12rem;
-    margin-bottom: 0px;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
   }
   .we h1 {
     font-size: 23px;
@@ -507,7 +371,7 @@ footer .newsletter input {
     line-height: 1.8;
   }
   .sp {
-    margin-top: 50px;
+    margin-top: 30rem;
   }
   .sp h5 {
     font-size: 1.4rem;
@@ -547,11 +411,11 @@ footer .newsletter input {
   }
   .objectives2 .img {
     width: 100%;
+    align-items: center;
   }
 
   .objectives2 .img img {
-    display: block;
-    margin-bottom: 2rem;
+    display: none;
   }
   .objective {
     width: 100%;
@@ -624,7 +488,7 @@ footer .newsletter input {
   left: 50%;
   transform: translateX(-50%);
   opacity: 1;
-  transition: opacity 0.5s; 
+  transition: opacity 0.5s;
 }
 
 #top-home-icon a {
@@ -641,21 +505,19 @@ footer .newsletter input {
   display: none;
 }
 
-
-
-
 /* --------------------md devices----------- */
 @media (min-width: 477px) and (max-width: 768px) {
-  #head h1{
+  #head h1 {
     font-size: 3.8rem;
   }
-  #head p{
+  #head p {
     font-size: 1.8rem;
     line-height: 3rem;
   }
-.blogAbout p{
-  font-size: 1.3rem;
-}
+
+  .blogAbout p {
+    font-size: 1.3rem;
+  }
   .we {
     margin-top: 10rem;
     margin-bottom: -10rem;
