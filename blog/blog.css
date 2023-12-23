@@ -285,11 +285,10 @@ footer {
   color: #e2e2e2;
   padding: 50px 20px;
   font-size: 15px;
-  margin: 20px;
 }
 footer .container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr ;
   grid-gap: 50px;
 }
 footer .title {
@@ -334,6 +333,10 @@ footer .newsletter input {
   outline: none;
   padding: 10px 15px;
   width: 100%;
+}
+footer .connect a{
+  text-decoration: none;
+  color: #444;
 }
 
 /* -------sm screens----- */
